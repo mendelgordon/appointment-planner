@@ -29,8 +29,10 @@ export function App() {
       <Outlet />
 
       <Routes>
-        <Route path="/contacts" element={<ContactsPage contacts={contacts} addContact={addContact} />} />
-        <Route path="/appointments" element={<AppointmentsPage appointments={appointments} addAppointment={addAppointment} contacts={contacts} />} />
+        <Route path="/" element={<App />}>
+          <Route path="contacts" element={<ContactsPage contacts={contacts} addContact={addContact} />} />
+          <Route path="appointments" element={<AppointmentsPage appointments={appointments} addAppointment={addAppointment} contacts={contacts} />} />
+        </Route>
       </Routes>
     </div>
   );
