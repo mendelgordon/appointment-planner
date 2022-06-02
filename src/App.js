@@ -1,25 +1,11 @@
 import { NavLink, Outlet, Routes, Route } from "react-router-dom";
 import { ContactsPage } from "./ContactsPage";
 import { AppointmentsPage } from "./AppointmentsPage";
-import "./App.css";
 import { useState } from "react";
 
 export function App() {
-  const [contacts, setContacts] = useState([
-    {
-      name: "Bob",
-      phone: "123-456-7890",
-      email: "bob@example.com",
-    },
-  ]);
-  const [appointments, setAppointments] = useState([
-    {
-      title: "Interview",
-      contact: "Bob",
-      date: "2020-01-01",
-      time: "12:00",
-    },
-  ]);
+  const [contacts, setContacts] = useState([]);
+  const [appointments, setAppointments] = useState([]);
 
   const addContact = (contact) => {
     setContacts([...contacts, contact]);
@@ -32,9 +18,6 @@ export function App() {
   return (
     <div>
       <nav>
-        <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "inactive")}>
-          Home
-        </NavLink>
         <NavLink to="/contacts" className={({ isActive }) => (isActive ? "active" : "inactive")}>
           Contacts
         </NavLink>
