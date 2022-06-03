@@ -1,5 +1,7 @@
 # Appointment Planner
 
+To see this project live [click here](https://appt-planner.netlify.app/).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
